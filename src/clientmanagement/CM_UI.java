@@ -10,12 +10,14 @@ package clientmanagement;
  * @author DLawrence
  */
 public class CM_UI extends javax.swing.JFrame {
-
+    private boolean AIassignisopen = false;
+    private boolean AIhubisopen = false;
     /**
      * Creates new form CM_UI
      */
     public CM_UI() {
         initComponents();
+        
     }
 
     /**
@@ -548,8 +550,8 @@ public class CM_UI extends javax.swing.JFrame {
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
         AIassign_UI actionItemAssign = new AIassign_UI();
-        actionItemAssign.show();
-        
+        actionItemAssign.setVisible(true);
+               
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -558,8 +560,9 @@ public class CM_UI extends javax.swing.JFrame {
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-        AIhub_UI actionItemHub = new AIhub_UI();
-        actionItemHub.show();
+            AIhub_UI actionItemHub = new AIhub_UI();
+            actionItemHub.setVisible(true);
+        
     }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
