@@ -10,8 +10,6 @@ package clientmanagement;
  * @author DLawrence
  */
 public class CM_UI extends javax.swing.JFrame {
-    private boolean AIassignisopen = false;
-    private boolean AIhubisopen = false;
     /**
      * Creates new form CM_UI
      */
