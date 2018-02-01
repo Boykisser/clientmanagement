@@ -9,6 +9,8 @@ package clientmanagement;
  *
  * @author DLawrence
  */
+import javax.swing.*;
+
 public class CM_UI extends javax.swing.JFrame {
     /**
      * Creates new form CM_UI
@@ -109,6 +111,11 @@ public class CM_UI extends javax.swing.JFrame {
         jLabel1.setText("Client Record");
 
         jButton1.setText("Add Record");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Delete Record");
 
@@ -324,15 +331,14 @@ public class CM_UI extends javax.swing.JFrame {
                                         .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jComboBox5, 0, 100, Short.MAX_VALUE))
                                     .addComponent(jLabel19)
-                                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(92, 92, 92))
+                                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jButton1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton3)
-                                .addContainerGap())))
+                                .addComponent(jButton3)))
+                        .addGap(58, 58, 58))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jSeparator4)
@@ -562,6 +568,28 @@ public class CM_UI extends javax.swing.JFrame {
             actionItemHub.setVisible(true);
         
     }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        int returnValue = 0;
+        
+        returnValue = JOptionPane.showConfirmDialog(null,
+                        "Do you want to add the current information as a NEW client record?",
+                        "Add Record",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE);
+        
+        if (returnValue == JOptionPane.YES_OPTION){
+                //add info to DB here
+    		JOptionPane.showMessageDialog(null, "New Client Record Added");
+        }
+    	else if (returnValue == JOptionPane.NO_OPTION){
+                //Do Nothing
+    		//JOptionPane.showMessageDialog(null, "No was clicked.");
+        }
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
