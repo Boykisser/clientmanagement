@@ -28,34 +28,34 @@ public class AIassign_UI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        lblActionItemAssignment = new javax.swing.JLabel();
+        lblSearchActionItem = new javax.swing.JLabel();
+        txtSearchActionItem = new javax.swing.JTextField();
+        lblSortMeetingType = new javax.swing.JLabel();
+        cmbSortMeetingType = new javax.swing.JComboBox<>();
+        btnAddCustomAI = new javax.swing.JButton();
+        btnSaveClose = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        lblAddActionItems = new javax.swing.JLabel();
+        lblAdd = new javax.swing.JLabel();
+        chkAdd1 = new javax.swing.JCheckBox();
+        chkAdd2 = new javax.swing.JCheckBox();
+        lblActionItem = new javax.swing.JLabel();
+        lblActionItemDescription1 = new javax.swing.JLabel();
+        lblActionItemDescription2 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel12 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jCheckBox4 = new javax.swing.JCheckBox();
+        lblAIAssigned = new javax.swing.JLabel();
+        lblRemove = new javax.swing.JLabel();
+        btnRemove = new javax.swing.JButton();
+        lblAssignTo = new javax.swing.JLabel();
+        cmbAssignTo = new javax.swing.JComboBox<>();
+        lblDue = new javax.swing.JLabel();
+        cmbDue = new javax.swing.JComboBox<>();
+        lblActionItem_Bottom = new javax.swing.JLabel();
+        lblActionItemDescription_Bottom = new javax.swing.JLabel();
+        lblReceived = new javax.swing.JLabel();
+        lblReceivedDateTime = new javax.swing.JLabel();
+        chkReceived = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Action Item Assignment");
@@ -65,62 +65,62 @@ public class AIassign_UI extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setText("Action Item Assignment");
+        lblActionItemAssignment.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblActionItemAssignment.setText("Action Item Assignment");
 
-        jLabel1.setText("Search by action item");
+        lblSearchActionItem.setText("Search by action item");
 
-        jLabel3.setText("Sort by meeting type");
+        lblSortMeetingType.setText("Sort by meeting type");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1st", "2nd", "3rd", "4th" }));
+        cmbSortMeetingType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1st", "2nd", "3rd", "4th" }));
 
-        jButton1.setText("Add Custom AI");
+        btnAddCustomAI.setText("Add Custom AI");
 
-        jButton2.setText("Save & Close");
+        btnSaveClose.setText("Save & Close");
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jLabel4.setText("Add Action Items");
+        lblAddActionItems.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblAddActionItems.setText("Add Action Items");
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jLabel5.setText("Add");
+        lblAdd.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        lblAdd.setText("Add");
 
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jLabel6.setText("Action Item");
+        lblActionItem.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        lblActionItem.setText("Action Item");
 
-        jLabel7.setText("Send investment account statements");
+        lblActionItemDescription1.setText("Send investment account statements");
 
-        jLabel8.setText("Consider going through the trial application process to evalute your insurance options");
+        lblActionItemDescription2.setText("Consider going through the trial application process to evalute your insurance options");
 
-        jLabel9.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jLabel9.setText("Action Items Currently Assigned");
+        lblAIAssigned.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblAIAssigned.setText("Action Items Currently Assigned");
 
-        jLabel10.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jLabel10.setText("Remove");
+        lblRemove.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        lblRemove.setText("Remove");
 
-        jButton3.setText("Remove");
+        btnRemove.setText("Remove");
 
-        jLabel11.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jLabel11.setText("Assign to");
+        lblAssignTo.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        lblAssignTo.setText("Assign to");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Client" }));
+        cmbAssignTo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Client" }));
 
-        jLabel12.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jLabel12.setText("Due");
+        lblDue.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        lblDue.setText("Due");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01/12/17" }));
+        cmbDue.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01/12/17" }));
 
-        jLabel13.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jLabel13.setText("Action Item");
+        lblActionItem_Bottom.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        lblActionItem_Bottom.setText("Action Item");
 
-        jLabel14.setText("Complete & return confidential information packet");
+        lblActionItemDescription_Bottom.setText("Complete & return confidential information packet");
 
-        jLabel15.setText("Received");
+        lblReceived.setText("Received");
 
-        jLabel16.setFont(new java.awt.Font("Dialog", 2, 11)); // NOI18N
-        jLabel16.setText("received 1/12/17 @ 11am");
+        lblReceivedDateTime.setFont(new java.awt.Font("Dialog", 2, 11)); // NOI18N
+        lblReceivedDateTime.setText("received 1/12/17 @ 11am");
 
-        jCheckBox4.setSelected(true);
-        jCheckBox4.setText("Yes");
+        chkReceived.setSelected(true);
+        chkReceived.setText("Yes");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -131,108 +131,108 @@ public class AIassign_UI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jCheckBox2)
+                        .addComponent(chkAdd2)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel8))
+                        .addComponent(lblActionItemDescription2))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel2)
+                        .addComponent(lblActionItemAssignment)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel3)
-                                .addComponent(jButton1))
+                                .addComponent(lblSearchActionItem)
+                                .addComponent(lblSortMeetingType)
+                                .addComponent(btnAddCustomAI))
                             .addGap(23, 23, 23)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton2)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField1)))
+                                .addComponent(btnSaveClose)
+                                .addComponent(cmbSortMeetingType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtSearchActionItem)))
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel4)
+                    .addComponent(lblAddActionItems)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                        .addComponent(lblAdd)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel6))
+                        .addComponent(lblActionItem))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jCheckBox1)
+                        .addComponent(chkAdd1)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel7))
-                    .addComponent(jLabel9)
+                        .addComponent(lblActionItemDescription1))
+                    .addComponent(lblAIAssigned)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3)
-                            .addComponent(jLabel10))
+                            .addComponent(btnRemove)
+                            .addComponent(lblRemove))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11))
+                            .addComponent(cmbAssignTo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblAssignTo))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12))
+                            .addComponent(cmbDue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDue))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel14))
+                            .addComponent(lblActionItem_Bottom)
+                            .addComponent(lblActionItemDescription_Bottom))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel16)
-                            .addComponent(jCheckBox4))))
+                            .addComponent(lblReceived)
+                            .addComponent(lblReceivedDateTime)
+                            .addComponent(chkReceived))))
                 .addGap(102, 102, 102))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addComponent(lblActionItemAssignment)
                 .addGap(44, 44, 44)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblSearchActionItem)
+                    .addComponent(txtSearchActionItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblSortMeetingType)
+                    .addComponent(cmbSortMeetingType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btnAddCustomAI)
+                    .addComponent(btnSaveClose))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel4)
+                .addComponent(lblAddActionItems)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
+                    .addComponent(lblAdd)
+                    .addComponent(lblActionItem))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jLabel7))
+                    .addComponent(chkAdd1)
+                    .addComponent(lblActionItemDescription1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jLabel8))
+                    .addComponent(chkAdd2)
+                    .addComponent(lblActionItemDescription2))
                 .addGap(85, 85, 85)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel9)
+                .addComponent(lblAIAssigned)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel15))
+                    .addComponent(lblRemove)
+                    .addComponent(lblAssignTo)
+                    .addComponent(lblDue)
+                    .addComponent(lblActionItem_Bottom)
+                    .addComponent(lblReceived))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14)
-                    .addComponent(jCheckBox4))
+                    .addComponent(btnRemove)
+                    .addComponent(cmbAssignTo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbDue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblActionItemDescription_Bottom)
+                    .addComponent(chkReceived))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel16)
+                .addComponent(lblReceivedDateTime)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -258,7 +258,7 @@ public class AIassign_UI extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+        /* Set the Windows look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -290,34 +290,34 @@ public class AIassign_UI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton btnAddCustomAI;
+    private javax.swing.JButton btnRemove;
+    private javax.swing.JButton btnSaveClose;
+    private javax.swing.JCheckBox chkAdd1;
+    private javax.swing.JCheckBox chkAdd2;
+    private javax.swing.JCheckBox chkReceived;
+    private javax.swing.JComboBox<String> cmbAssignTo;
+    private javax.swing.JComboBox<String> cmbDue;
+    private javax.swing.JComboBox<String> cmbSortMeetingType;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblAIAssigned;
+    private javax.swing.JLabel lblActionItem;
+    private javax.swing.JLabel lblActionItemAssignment;
+    private javax.swing.JLabel lblActionItemDescription1;
+    private javax.swing.JLabel lblActionItemDescription2;
+    private javax.swing.JLabel lblActionItemDescription_Bottom;
+    private javax.swing.JLabel lblActionItem_Bottom;
+    private javax.swing.JLabel lblAdd;
+    private javax.swing.JLabel lblAddActionItems;
+    private javax.swing.JLabel lblAssignTo;
+    private javax.swing.JLabel lblDue;
+    private javax.swing.JLabel lblReceived;
+    private javax.swing.JLabel lblReceivedDateTime;
+    private javax.swing.JLabel lblRemove;
+    private javax.swing.JLabel lblSearchActionItem;
+    private javax.swing.JLabel lblSortMeetingType;
+    private javax.swing.JTextField txtSearchActionItem;
     // End of variables declaration//GEN-END:variables
 }
