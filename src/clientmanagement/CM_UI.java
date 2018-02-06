@@ -600,7 +600,7 @@ public class CM_UI extends javax.swing.JFrame {
 
     private void btnDateStampActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDateStampActionPerformed
         String timeStamp = new SimpleDateFormat("MM/dd/yyyy").format(new Date());
-        //ADD functionality here
+        //ADD functionality here for DATE STAMP
     }//GEN-LAST:event_btnDateStampActionPerformed
 
     /**
@@ -752,6 +752,7 @@ public class CM_UI extends javax.swing.JFrame {
         System.out.println(test3);
         
         //submit Record to DB
+        addRecord.submitRecord();
     }
 
 }

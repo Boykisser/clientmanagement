@@ -5,10 +5,24 @@
  */
 package clientmanagement;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /**
  * @author DLawrence
  */
 public class ClientRecord {
+    
+    // JDBC driver name and database URL
+   static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+   static final String DB_URL = "jdbc:mysql://localhost/EMP";
+
+   //  Database credentials
+   static final String USER = "root";
+   static final String PASS = "root";
     
     //Client Record Data
     private String firstName = "";
@@ -41,8 +55,9 @@ public class ClientRecord {
     private boolean FPO_BU;
     
     ClientRecord(){
-       //default constructor 
+       
     }
+    
     ClientRecord(String firstname, String lastName, String email, String phone, String occupation,
                 String rating, String type, String source, String gradYear, String stage, String lastContact,
                 String nextContact, String quickContactNotes, String type1_MT, String type2_MT, String date1_MT,
@@ -73,6 +88,7 @@ public class ClientRecord {
           
     }
     
+    //get methods are currently only used for testing purposes
     public String getFirstName(){
         return firstName;
     }
@@ -81,6 +97,75 @@ public class ClientRecord {
     }
     public boolean getFPO(){
         return FPO_BU;
+    }
+    
+    public void submitRecord(){
+        Connection conn = null;
+        Statement stmt = null;
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL,USER,PASS);
+
+            //STEP 4: Execute a query
+            System.out.println("Creating statement...");
+            stmt = conn.createStatement();
+
+            String sqlInsert;
+            sqlInsert = "INSERT INTO Employees VALUES (103, 35, 'First', 'Last')";
+            stmt.executeUpdate(sqlInsert);
+
+            String sqlSelect;
+            sqlSelect = "SELECT id, first, last, age FROM Employees";
+            ResultSet rs = stmt.executeQuery(sqlSelect);
+
+            //STEP 5: Extract data from result set
+            while(rs.next()){
+                //Retrieve by column name
+                int id  = rs.getInt("id");
+                int age = rs.getInt("age");
+                String first = rs.getString("first");
+                String last = rs.getString("last");
+
+                //Display values
+                System.out.print("ID: " + id);
+                System.out.print(", Age: " + age);
+                System.out.print(", First: " + first);
+                System.out.println(", Last: " + last);
+            }
+            //STEP 6: Clean-up environment
+            rs.close();
+            stmt.close();
+            conn.close();
+	}
+	   catch(SQLException se){
+		  //Handle errors for JDBC
+		  se.printStackTrace();
+	   }
+	   catch(Exception e){
+		  //Handle errors for Class.forName
+		  e.printStackTrace();
+	   }
+	   finally{
+		  //finally block used to close resources
+		  try{
+			 if(stmt!=null)
+				stmt.close();
+		  }catch(SQLException se2){
+			//nothing we can do
+		  }
+		  try{
+			 if(conn!=null){
+				conn.close();
+			 }
+		  }catch(SQLException se){
+			se.printStackTrace();
+		  }//end finally try
+	   }//end try
+	   System.out.println("Goodbye!");
     }
     
     
