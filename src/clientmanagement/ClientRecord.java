@@ -115,26 +115,28 @@ public class ClientRecord {
             stmt = conn.createStatement();
 
             String sqlInsert;
-            sqlInsert = "INSERT INTO Employees VALUES (103, 35, 'First', 'Last')";
+            sqlInsert = "INSERT INTO ClientRecord VALUES (" + "'" + firstName + "'" 
+                                                            + ", " + "'" + lastName + "'" 
+                                                            + ", " + "'" + email + "'"+ " )";
             stmt.executeUpdate(sqlInsert);
 
             String sqlSelect;
-            sqlSelect = "SELECT id, first, last, age FROM Employees";
+            sqlSelect = "SELECT firstName, lastName, email FROM ClientRecord";
             ResultSet rs = stmt.executeQuery(sqlSelect);
-
+            
             //STEP 5: Extract data from result set
             while(rs.next()){
                 //Retrieve by column name
-                int id  = rs.getInt("id");
-                int age = rs.getInt("age");
-                String first = rs.getString("first");
-                String last = rs.getString("last");
+                String id  = rs.getString("firstName");
+                String last = rs.getString("lastName");
+                String emailPrint = rs.getString("email");
+                
 
                 //Display values
-                System.out.print("ID: " + id);
-                System.out.print(", Age: " + age);
-                System.out.print(", First: " + first);
-                System.out.println(", Last: " + last);
+                System.out.print("Firstname: " + id);
+                System.out.print(", Lastname: " + last);
+                System.out.print(", email: " + emailPrint);
+                
             }
             //STEP 6: Clean-up environment
             rs.close();
@@ -165,7 +167,7 @@ public class ClientRecord {
 			se.printStackTrace();
 		  }//end finally try
 	   }//end try
-	   System.out.println("Goodbye!");
+	   System.out.println("\nGoodbye!");
     }
     
     

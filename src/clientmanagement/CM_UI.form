@@ -2,8 +2,8 @@
 
 <Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Client Manager"/>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" value="New Client Record"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="null"/>
     </Property>
@@ -47,102 +47,86 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lblFirstName" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblFirstName" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblNextContact" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="lblNextContact" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="lblLastName" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="lblPhone" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="lblOccupation" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="lblEmail" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="lblLastContact" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblLastName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblPhone" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblOccupation" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblEmail" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
+                                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="lblLastContact" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="txtLastName" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                                              <Component id="txtEmail" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                                              <Component id="txtPhone" min="-2" pref="118" max="-2" attributes="0"/>
+                                              <Component id="txtOccupation" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                                              <Component id="txtFirstName" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
-                                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="txtLastName" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                                                      <Component id="txtEmail" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                                                      <Component id="txtPhone" min="-2" pref="118" max="-2" attributes="0"/>
-                                                      <Component id="txtOccupation" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                                                      <Component id="txtFirstName" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                                                  </Group>
+                                                  <Component id="cmbLastContact" min="-2" pref="100" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="btnDateStamp" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <Component id="cmbLastContact" min="-2" pref="100" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="btnDateStamp" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="cmbNextContact" min="-2" pref="100" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="btnAddReminder" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="btn1W" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="btn2W" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="btn1M" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="btn3M" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="btn1Y" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
+                                                  <Component id="cmbNextContact" min="-2" pref="100" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="btnAddReminder" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="btn1W" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="btn2W" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="btn1M" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="btn3M" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="btn1Y" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
                                   </Group>
                               </Group>
-                              <Component id="lblClientRecord" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                          <Component id="lblSource" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblType" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblRating" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="lblGradYear" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblStage" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtSource" max="32767" attributes="0"/>
-                                          <Component id="cmbRating" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="cmbType" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="cmbGradYear" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="cmbStage" alignment="0" pref="100" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="lblQuickContactNotes" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtQuickContactNotes" min="-2" pref="182" max="-2" attributes="0"/>
-                                  </Group>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Component id="lblSource" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblType" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblRating" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="btnAddRecord" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="btnDelRecord" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="btnSaveRecord" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="lblGradYear" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblStage" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtSource" max="32767" attributes="0"/>
+                                  <Component id="cmbRating" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="cmbType" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="cmbGradYear" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="cmbStage" alignment="0" pref="100" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="lblQuickContactNotes" min="-2" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -236,6 +220,12 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="lblClientRecord" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="btnAddRecord" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
           </Group>
@@ -250,8 +240,6 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblClientRecord" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnAddRecord" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnDelRecord" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnSaveRecord" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                           <Component id="sprClientRecord" min="-2" pref="2" max="-2" attributes="0"/>
@@ -329,7 +317,7 @@
                                               <Component id="btn1Y" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Component id="txtQuickContactNotes" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -414,16 +402,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddRecordActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnDelRecord">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Delete Record"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnSaveRecord">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Save Record"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblSchedDetails">
           <Properties>
@@ -750,8 +728,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnActionItems2ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtQuickContactNotes">
-        </Component>
         <Component class="javax.swing.JLabel" name="lblDelMeeting">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -861,6 +837,21 @@
             <Property name="text" type="java.lang.String" value="Delete"/>
           </Properties>
         </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="txtQuickContactNotes">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

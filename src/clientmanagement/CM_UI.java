@@ -34,8 +34,6 @@ public class CM_UI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         lblClientRecord = new javax.swing.JLabel();
         btnAddRecord = new javax.swing.JButton();
-        btnDelRecord = new javax.swing.JButton();
-        btnSaveRecord = new javax.swing.JButton();
         lblSchedDetails = new javax.swing.JLabel();
         lblMeetingTracking = new javax.swing.JLabel();
         lblAccountInfo = new javax.swing.JLabel();
@@ -84,7 +82,6 @@ public class CM_UI extends javax.swing.JFrame {
         lblActionItems = new javax.swing.JLabel();
         btnActionItems1 = new javax.swing.JButton();
         btnActionItems2 = new javax.swing.JButton();
-        txtQuickContactNotes = new javax.swing.JTextField();
         lblDelMeeting = new javax.swing.JLabel();
         btnDelMeeting1 = new javax.swing.JButton();
         btnDelMeeting2 = new javax.swing.JButton();
@@ -102,9 +99,11 @@ public class CM_UI extends javax.swing.JFrame {
         chkFPO = new javax.swing.JCheckBox();
         lblDelMeeting_AI = new javax.swing.JLabel();
         btnDelMeeting_AI = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtQuickContactNotes = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Client Manager");
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("New Client Record");
         setMinimumSize(null);
         setResizable(false);
 
@@ -118,10 +117,6 @@ public class CM_UI extends javax.swing.JFrame {
                 btnAddRecordActionPerformed(evt);
             }
         });
-
-        btnDelRecord.setText("Delete Record");
-
-        btnSaveRecord.setText("Save Record");
 
         lblSchedDetails.setFont(new java.awt.Font("Calibri Light", 1, 18)); // NOI18N
         lblSchedDetails.setForeground(new java.awt.Color(0, 102, 204));
@@ -264,6 +259,10 @@ public class CM_UI extends javax.swing.JFrame {
 
         btnDelMeeting_AI.setText("Delete");
 
+        txtQuickContactNotes.setColumns(20);
+        txtQuickContactNotes.setRows(5);
+        jScrollPane1.setViewportView(txtQuickContactNotes);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -272,80 +271,69 @@ public class CM_UI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblFirstName)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblFirstName)
+                                    .addComponent(lblNextContact, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblNextContact, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(lblLastName)
-                                                    .addComponent(lblPhone)
-                                                    .addComponent(lblOccupation)
-                                                    .addComponent(lblEmail))
-                                                .addGap(7, 7, 7))
-                                            .addComponent(lblLastContact, javax.swing.GroupLayout.Alignment.TRAILING))
+                                            .addComponent(lblLastName)
+                                            .addComponent(lblPhone)
+                                            .addComponent(lblOccupation)
+                                            .addComponent(lblEmail))
+                                        .addGap(7, 7, 7))
+                                    .addComponent(lblLastContact, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtOccupation, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(8, 8, 8)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(txtOccupation, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(cmbLastContact, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btnDateStamp))
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addComponent(cmbLastContact, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(btnDateStamp))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addComponent(cmbNextContact, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(btnAddReminder))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addComponent(btn1W)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(btn2W)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(btn1M)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(btn3M)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(btn1Y))))))))
-                            .addComponent(lblClientRecord))
+                                                .addComponent(cmbNextContact, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btnAddReminder))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(btn1W)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btn2W)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btn1M)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btn3M)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btn1Y)))))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblSource)
-                                        .addComponent(lblType, javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(lblRating, javax.swing.GroupLayout.Alignment.TRAILING))
-                                    .addComponent(lblGradYear, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblStage, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addGap(34, 34, 34)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtSource)
-                                        .addComponent(cmbRating, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(cmbType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(cmbGradYear, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(cmbStage, 0, 100, Short.MAX_VALUE))
-                                    .addComponent(lblQuickContactNotes)
-                                    .addComponent(txtQuickContactNotes, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnAddRecord)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDelRecord)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnSaveRecord)))
-                        .addGap(58, 58, 58))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblSource)
+                                .addComponent(lblType, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblRating, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(lblGradYear, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblStage, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(34, 34, 34)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtSource)
+                                .addComponent(cmbRating, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cmbType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cmbGradYear, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cmbStage, 0, 100, Short.MAX_VALUE))
+                            .addComponent(lblQuickContactNotes)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(111, 111, 111))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(sprAccountInfo)
@@ -415,6 +403,11 @@ public class CM_UI extends javax.swing.JFrame {
                                             .addComponent(btnDelMeeting_AI)
                                             .addComponent(lblDelMeeting_AI))))
                                 .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblClientRecord)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAddRecord)
                         .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
@@ -426,9 +419,7 @@ public class CM_UI extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblClientRecord)
-                            .addComponent(btnAddRecord)
-                            .addComponent(btnDelRecord)
-                            .addComponent(btnSaveRecord))
+                            .addComponent(btnAddRecord))
                         .addGap(2, 2, 2)
                         .addComponent(sprClientRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -493,7 +484,7 @@ public class CM_UI extends javax.swing.JFrame {
                                             .addComponent(btn1M)
                                             .addComponent(btn3M)
                                             .addComponent(btn1Y)))
-                                    .addComponent(txtQuickContactNotes, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(sprMeetingTracking, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -571,8 +562,9 @@ public class CM_UI extends javax.swing.JFrame {
 
     private void btnActionItems2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionItems2ActionPerformed
         // TODO add your handling code here:
-            AIhub_UI actionItemHub = new AIhub_UI();
-            actionItemHub.setVisible(true);
+        AIassign_UI actionItemAssign = new AIassign_UI();
+        actionItemAssign.setVisible(true);
+           
         
     }//GEN-LAST:event_btnActionItems2ActionPerformed
 
@@ -654,8 +646,6 @@ public class CM_UI extends javax.swing.JFrame {
     private javax.swing.JButton btnDelMeeting1;
     private javax.swing.JButton btnDelMeeting2;
     private javax.swing.JButton btnDelMeeting_AI;
-    private javax.swing.JButton btnDelRecord;
-    private javax.swing.JButton btnSaveRecord;
     private javax.swing.JCheckBox chkFPO;
     private javax.swing.JComboBox<String> cmbDate_MT1;
     private javax.swing.JComboBox<String> cmbDate_MT2;
@@ -670,6 +660,7 @@ public class CM_UI extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbType_MT1;
     private javax.swing.JComboBox<String> cmbType_MT2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAccountInfo;
     private javax.swing.JLabel lblActionItems;
     private javax.swing.JLabel lblBenefit;
@@ -708,10 +699,12 @@ public class CM_UI extends javax.swing.JFrame {
     private javax.swing.JTextField txtLastName;
     private javax.swing.JTextField txtOccupation;
     private javax.swing.JTextField txtPhone;
-    private javax.swing.JTextField txtQuickContactNotes;
+    private javax.swing.JTextArea txtQuickContactNotes;
     private javax.swing.JTextField txtSource;
     // End of variables declaration//GEN-END:variables
-
+    
+    
+    
     public void addNewRecord(){
         //pull GUI data
         String firstName = txtFirstName.getText();

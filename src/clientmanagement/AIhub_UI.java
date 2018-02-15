@@ -66,6 +66,7 @@ public class AIhub_UI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Action Items Hub");
+        setResizable(false);
 
         lblActionItemHub.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblActionItemHub.setText("Action Items Hub");
