@@ -547,6 +547,7 @@ public class CM_UI extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnActionItems1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionItems1ActionPerformed
@@ -731,21 +732,19 @@ public class CM_UI extends javax.swing.JFrame {
         boolean FPO_BU = chkFPO.isSelected();
         
         //create Record Object and fill with user-submitted info
-        ClientRecord addRecord = new ClientRecord(firstName,lastName,email,phone,occupation,rating,
+        ClientRecord createRecord = new ClientRecord(firstName,lastName,email,phone,occupation,rating,
                                                     type,source,gradYear,stage,lastContact,nextContact,
                                                     quickContactNotes,type1_MT,type2_MT,date1_MT,date2_MT,type_AI,opened,
                                                     company,benefit,FPO_BU);
         
         //confirm different variable types were set correctly
-        String test = addRecord.getFirstName();
+        String test = createRecord.getFirstName();
         System.out.println(test);
-        String test2 = addRecord.getRating();
+        String test2 = createRecord.getRating();
         System.out.println(test2);
-        boolean test3 = addRecord.getFPO();
-        System.out.println(test3);
+        boolean test3 = createRecord.getFPO();
+        System.out.println(test3);    
         
-        //submit Record to DB
-        addRecord.submitRecord();
     }
 
 }
