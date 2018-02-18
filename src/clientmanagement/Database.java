@@ -48,13 +48,14 @@ public class Database {
                 data.add(row);
             }
 
+               // stmt1.setString(1,arguser); for later
 
 
     */
 
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-    static final String DB_URL = "jdbc:mysql://localhost/EMP";
+    static final String DB_URL = "jdbc:mysql://localhost:3306/EMP";
 
     //Database credentials
     static final String USER = "root";
@@ -67,10 +68,72 @@ public class Database {
     private Vector dataVector = new Vector();
    
     
-    public void authenticate(){
 
-    }
-
+    public int authenticate(String argUser, String argPass){
+        
+        String passCheck, userCheck;
+        Connection conn = null;
+        PreparedStatement stmt1 = null;
+        int qResult = 0;
+        
+        try{
+            //Connecting to the Gaytabase          
+            System.out.println("Connecting to database..."); 
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection(DB_URL,USER,PASS);
+            
+            System.out.println("Creating statement...");
+            System.out.println("username passed: " + argUser); // test use
+            System.out.println(" password passed: " + argPass); // test use
+            
+            //Selecting all usernames and passwords    
+            String strQuery = "SELECT username, password FROM testusers1"; // WHERE username = ?";
+            stmt1 = conn.prepareStatement(strQuery);
+            ResultSet rs = stmt1.executeQuery();
+            
+            //Checking usernames and passwords against those in the database, returns 1 if match found.
+           while(rs.next())
+           {
+                   userCheck = rs.getString("username");
+                   passCheck = rs.getString("password");
+                   System.out.println("username checked: " + userCheck); // test use
+                   System.out.println(" password checked: " + passCheck); // test use
+                   
+                   if(userCheck.equals(argUser) && passCheck.equals(argPass))
+                   {
+                       qResult = 1;
+                       return qResult;
+                   }      
+           }
+           return qResult;
+        }
+        catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }
+        catch(ClassNotFoundException e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }
+        finally{
+            //finally block used to close resources
+            try{
+                if(stmt1!=null)
+                stmt1.close();
+            }catch(SQLException se2){
+                //nothing we can do
+            }
+            try{
+                if(conn!=null){
+                    conn.close();
+                }
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        return qResult;
+    }//end querylogin
+    
     public void queryAllElements(){
 
         Connection conn = null;

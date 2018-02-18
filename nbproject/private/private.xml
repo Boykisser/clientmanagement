@@ -3,12 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Dmoney/Documents/NetBeansProjects/clientManagement/src/clientmanagement/AIassign_UI.java</file>
-            <file>file:/C:/Users/Dmoney/Documents/NetBeansProjects/clientManagement/src/clientmanagement/CM_UI.java</file>
-            <file>file:/C:/Users/Dmoney/Documents/NetBeansProjects/clientManagement/src/clientmanagement/Navigation.java</file>
-            <file>file:/C:/Users/Dmoney/Documents/NetBeansProjects/clientManagement/src/clientmanagement/AIhub_UI.java</file>
-            <file>file:/C:/Users/Dmoney/Documents/NetBeansProjects/clientManagement/src/clientmanagement/ClientRecord.java</file>
-            <file>file:/C:/Users/Dmoney/Documents/NetBeansProjects/clientManagement/src/clientmanagement/Login.java</file>
+            <file>file:/C:/Users/Zack/Documents/NetBeansProjects/clientmanagement-master/src/clientmanagement/AIhub_UI.java</file>
+            <file>file:/C:/Users/Zack/Documents/NetBeansProjects/clientmanagement-master/src/clientmanagement/CM_UI.java</file>
+            <file>file:/C:/Users/Zack/Documents/NetBeansProjects/clientmanagement-master/src/clientmanagement/Navigation.java</file>
+            <file>file:/C:/Users/Zack/Documents/NetBeansProjects/clientmanagement-master/src/clientmanagement/Login.java</file>
+            <file>file:/C:/Users/Zack/Documents/NetBeansProjects/clientmanagement-master/src/clientmanagement/DatabaseTable.java</file>
+            <file>file:/C:/Users/Zack/Documents/NetBeansProjects/clientmanagement-master/src/clientmanagement/Database.java</file>
+            <file>file:/C:/Users/Zack/Documents/NetBeansProjects/clientmanagement-master/src/clientmanagement/ClientRecord.java</file>
+            <file>file:/C:/Users/Zack/Documents/NetBeansProjects/clientmanagement-master/src/clientmanagement/CreateNewAccount.java</file>
         </group>
     </open-files>
 </project-private>

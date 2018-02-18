@@ -37,7 +37,6 @@ public class Navigation extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu");
-        setPreferredSize(new java.awt.Dimension(400, 300));
         setResizable(false);
 
         jLabel1.setText("Navigation Menu");
